@@ -1,0 +1,23 @@
+How to pick and choose which table rows are already open on page load...
+
+Add the following javascript:
+
+	$(document).ready(function() {
+	  setTimeout(function() {
+	    $("#load-opened a.act-more.act-collapsed").trigger('click');
+			}, 10);
+	});
+  
+  This is saying that once the page has loaded, we're going to isolate 
+  the button that needs to be clicked to open up the table row, and 
+  then any table row that has the id "load-opened" will then be triggered and clicked.
+  
+  Then you add the following code:
+  
+  id="load-opened" 
+  
+  to every table row in the html file, that you want to be opened when the page loads.
+  
+  My first row looks like this...
+  
+  <tr class="pricing-row" id="load-opened" data-id="1" data-parent="">
